@@ -20,6 +20,8 @@ function runOneTimeTasks() {
 // Task 4: Start Monitoring Function
 function startMonitoring() {
   // TODO: Write a function named `startMonitoring` that uses `setInterval` to simulate continuous monitoring. This function should print a message every few seconds and store the interval ID in `monitoringTaskId`.
+  console.log("I'm not creative enough for this!!");
+  monitoringTaskId = setInterval(() => console.log("Monitoring..."), 2500);
 }
 
 // Task 5: Stop Monitoring Function
