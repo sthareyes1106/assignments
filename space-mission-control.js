@@ -34,6 +34,17 @@ function stopMonitoring() {
 // Task 6: Start Countdown Function
 function startCountdown(duration) {
   // TODO: Create a function named `startCountdown` that takes a duration parameter. Use `setInterval` to decrease the countdown every second and print the remaining time. Use `clearInterval` to stop the countdown when it reaches zero, printing a "Liftoff!" message.
+  let timeLeft = duration;
+  console.log(`You have ${timeLeft} seconds until takeoff.`);
+  const timerId = setInterval(() => {
+    timeLeft--;
+    console.log(`You have ${timeLeft} seconds left.`);
+
+    if (timeLeft <= 0) {
+      clearInterval(timerId);
+      console.log("Liftoff!");
+    }
+  }, 1000);
 }
 
 // Task 7: Schedule Pre-Launch Activities and Launch
