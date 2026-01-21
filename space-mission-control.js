@@ -27,6 +27,8 @@ function startMonitoring() {
 // Task 5: Stop Monitoring Function
 function stopMonitoring() {
   // TODO: Implement a function named `stopMonitoring` that stops the continuous monitoring by using `clearInterval` on `monitoringTaskId`.
+  clearInterval(monitoringTaskId);
+  console.log("Monitoring Stopped.");
 }
 
 // Task 6: Start Countdown Function
@@ -39,4 +41,4 @@ function scheduleMission() {
   // TODO: Use the functions you've created to schedule the pre-launch system check, start and stop monitoring, and execute the countdown. Make sure to adjust the delays appropriately to simulate a real mission timeline.
 }
 
-scheduleMission(); // Starts the mission.
+// scheduleMission(); // Starts the mission.
