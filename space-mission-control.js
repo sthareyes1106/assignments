@@ -12,7 +12,7 @@ function addOneTimeTask(func, delay) {
 // Task 3: Run One-Time Tasks Function
 function runOneTimeTasks() {
   // TODO: Create a function named `runOneTimeTasks` that iterates over the `oneTimeTasks` array and uses `setTimeout` to schedule each task according to its delay.
-  for (let i = 0; i < oneTimeTasks.length; i++) {
+  for (const task of oneTimeTasks) {
     setTimeout(oneTimeTasks.function, oneTimeTasks.delay);
   }
 }
@@ -21,7 +21,9 @@ function runOneTimeTasks() {
 function startMonitoring() {
   // TODO: Write a function named `startMonitoring` that uses `setInterval` to simulate continuous monitoring. This function should print a message every few seconds and store the interval ID in `monitoringTaskId`.
   console.log("I'm not creative enough for this!!");
-  monitoringTaskId = setInterval(() => console.log("Monitoring..."), 2500);
+  monitoringTaskId = setInterval(function () {
+    console.log("Monitoring...");
+  }, 2000);
 }
 
 // Task 5: Stop Monitoring Function
@@ -50,6 +52,15 @@ function startCountdown(duration) {
 // Task 7: Schedule Pre-Launch Activities and Launch
 function scheduleMission() {
   // TODO: Use the functions you've created to schedule the pre-launch system check, start and stop monitoring, and execute the countdown. Make sure to adjust the delays appropriately to simulate a real mission timeline.
+  startMonitoring();
+  addOneTimeTask(function () {
+    console.log("Pre-launch system check successful");
+  }, 4000);
+  addOneTimeTask(stopMonitoring, 8000);
+  addOneTimeTask(function () {
+    startCountdown(10);
+  }, 10000);
+  runOneTimeTasks();
 }
 
-// scheduleMission(); // Starts the mission.
+scheduleMission(); // Starts the mission.
