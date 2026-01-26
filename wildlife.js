@@ -36,9 +36,15 @@ const lionProfile = {
   species: "Lion",
 };
 // TODO: Duplicate an animal profile object using a shallow copy. Add genetic diversity information using the `genetics` property to this copy. Observe and explain how changes to nested properties affect both the original and the copied object.
+
+const lionProfile2 = { ...lionProfile, genetics: "Who knows!" };
+console.log(lionProfile);
+console.log(lionProfile2);
+
 /*
  * Observations:
  * TODO: Explain here.
+ * In this case, when the copy is edited, only the copy is affected. The original profile remains the same.
  */
 
 /* Task 5: Analyze Ecosystem Health */
