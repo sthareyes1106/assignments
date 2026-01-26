@@ -5,11 +5,14 @@
 function animalSightings(...animals) {
   console.log(animals);
 }
+animalSightings("a", "b", "c", "d", "e", "f", "g");
 
 /* Task 2: Merge Habitat Areas */
 const forestHabitats = ["Forest A", "Forest B"];
 const savannahHabitats = ["Savannah C", "Savannah D"];
 // TODO: You are given two arrays of habitat names. Use the spread operator to combine them into a comprehensive list of protected areas within the sanctuary.
+const protectedHabitats = [...forestHabitats, ...savannahHabitats];
+console.log(protectedHabitats);
 
 /* Task 3: Update Conservation Status */
 const rhinoStatus = {
