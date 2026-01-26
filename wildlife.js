@@ -1,6 +1,4 @@
 /* Task 1: Track Animal Sightings */
-// TODO: Write a function with rest parameters to print sightings of different animals within the sanctuary. This function should accept an arbitrary number of animal names.
-
 // I think this is what I'm supposed to do...
 function animalSightings(...animals) {
   console.log(animals);
@@ -10,7 +8,7 @@ animalSightings("a", "b", "c", "d", "e", "f", "g");
 /* Task 2: Merge Habitat Areas */
 const forestHabitats = ["Forest A", "Forest B"];
 const savannahHabitats = ["Savannah C", "Savannah D"];
-// TODO: You are given two arrays of habitat names. Use the spread operator to combine them into a comprehensive list of protected areas within the sanctuary.
+
 const protectedHabitats = [...forestHabitats, ...savannahHabitats];
 console.log(protectedHabitats);
 
@@ -19,7 +17,7 @@ const rhinoStatus = {
   population: 500,
   status: "Endangered",
 };
-// TODO: You are given an object representing an animal's conservation status. Use the spread operator to update this status with new information, such as an increase in population or a change in habitat.
+
 // I'm just gonna make a copy of this...
 const rhinoStatusUpdate = {
   ...rhinoStatus,
@@ -35,15 +33,12 @@ const lionProfile = {
   age: 5,
   species: "Lion",
 };
-// TODO: Duplicate an animal profile object using a shallow copy. Add genetic diversity information using the `genetics` property to this copy. Observe and explain how changes to nested properties affect both the original and the copied object.
 
 const lionProfile2 = { ...lionProfile, genetics: "Who knows!" };
-console.log(lionProfile);
+// console.log(lionProfile);
 console.log(lionProfile2);
-
 /*
  * Observations:
- * TODO: Explain here.
  * In this case, when the copy is edited, only the copy is affected. The original profile remains the same.
  */
 
@@ -55,8 +50,17 @@ const ecosystemHealth = {
     carnivores: "Sufficient",
   },
 };
-// TODO: You are given an object with a nested structure detailing the ecosystem's health, including water quality and food supply. Perform a shallow copy and modify a nested property. Observe and explain how changes to nested properties affect both the original and the copied object.
+
+const ecoSystemHealthUpdate = {
+  ...ecosystemHealth,
+};
+// Updating the nested property of 'carnivores'
+ecoSystemHealthUpdate.foodSupply.carnivores =
+  "Lacking. They're eating the herbivores.";
+console.log(ecoSystemHealthUpdate);
+console.log(ecosystemHealth);
+
 /*
  * Observations:
- * TODO: Explain here.
+ * Modifying a nested property in the copy affects the same property in the original object. When making copies using the spread operator, it only makes a shallow copy; anything deeper than that (nested properties) have the same reference.
  */
