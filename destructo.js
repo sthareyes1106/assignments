@@ -45,6 +45,8 @@ console.log(`The essential elements are ${el1} and ${el2}.`);
 /* Task 6: Skipping Stones */
 const stones = [1, 2, 3, 4, 5, 6];
 // TODO: Crossing the River of Reflections requires skipping certain stones. Use array destructuring to extract only the first and the sixth stones. Print the extracted stones.
+const [stone1, , , , , stone6] = stones;
+console.log(`Stones: ${stone1}, ${stone6}`);
 
 /* Task 7: The Array of Shadows */
 const shadows = ["Darkness", "Silence", "Whisper", "Echo"];
