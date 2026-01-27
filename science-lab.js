@@ -1,8 +1,31 @@
 /* Task 1: Compile Participant Details with Shorthand Property Names */
 // TODO: Construct an object named `participant` with properties for `name`, `age`, and `studyField`. Utilize shorthand property names to simplify your code.
 
+// Example participant variables
+const name = "Hank";
+const age = 45;
+const studyField = "Biology";
+
+// Participant object
+const participant = {
+  name,
+  age,
+  studyField,
+};
+
 /* Task 2: Implement a Shorthand Function for Participant Info */
 // TODO: Copy the `participant` object by adding a shorthand method named `displayInfo` that prints the participant's details using `this` and a template string.
+
+const newParticipant = {
+  ...participant,
+  displayInfo() {
+    console.log(
+      `This participant, ${this.name}, is ${this.age} years old, and works in ${this.studyField}.`,
+    );
+  },
+};
+
+// newParticipant.displayInfo();
 
 /* Task 3: Implement a Same Shorthand Arrow Function for Participant Info */
 // TODO: Echo the above task with an arrow function. Observe the behavior of `this` and explain your findings.
