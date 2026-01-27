@@ -23,9 +23,8 @@ const doorCode = {
 };
 // TODO: To open the Mysterious Door, a sequence is required, which might be incomplete. Use object destructuring to assign default values to ensure the door opens even if part of the code is missing. Make sure the `middle` defaults to one of the values from the `remaining` variable above if not provided. Print the door code sequence.
 // Check solution code after to see what exactly to do here...
-const { middle = remaining.third } = doorCode;
-console.log(doorCode);
-console.log(middle);
+const { upper, middle = remaining.third, lower } = doorCode;
+console.log(`The door code is: ${upper}, ${middle}, ${lower}`);
 
 /* Task 4: The Guardian's Riddle */
 const riddle = {
@@ -39,8 +38,8 @@ console.log(`The translation is ${translation}.`);
 /* Task 5: The Array of Elements */
 const elements = ["Fire", "Water", "Earth", "Air"];
 // TODO: Inside the library, Destructo discovers an array that represents the elements needed to decipher the next clue. Use array destructuring to extract the first two elements. Print the essential elements.
-const [el1, el2] = elements;
-console.log(`The essential elements are ${el1} and ${el2}.`);
+const [firstEl, secondEl] = elements;
+console.log(`The essential elements are ${firstEl} and ${secondEl}.`);
 
 /* Task 6: Skipping Stones */
 const stones = [1, 2, 3, 4, 5, 6];
@@ -60,12 +59,15 @@ console.log(`The hidden shadows: ${hidden}`);
 // Not exactly sure how to test this one out.
 function revealPath({ direction, distance }) {
   (direction, distance);
-  console.log(direction);
-  console.log(distance);
+  console.log(`Move ${distance} toward ${direction}`);
 }
 
 /* Task 9: The Scroll of Defaults */
 // TODO: Destructo finds an ancient scroll with a potion recipe, but some ingredients are missing. Write a function `mixPotion` that uses defaults "Water" and "Fireflower" for `ingredient1` and `ingredient2` if they are not specified and print those mixings. The function takes an object with these optional properties.
+function mixPotion({ ingredient1 = "Water", ingredient2 = "Fireflower" } = {}) {
+  console.log(`Ingredient 1 = ${ingredient1}, Ingredient 2 = ${ingredient2}`);
+}
+mixPotion({ ingredient1: "Wolfsbane" });
 
 /* Task 10: The Array Spell */
 // TODO: At the gates of an ancient library, Destructo must cast a spell with the first two ingredients from a list given to him by a wise owl. Create a function `castSpell` that uses array destructuring to access these ingredients from an array and print the spell casting.
