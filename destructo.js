@@ -22,6 +22,10 @@ const doorCode = {
   lower: "Omega",
 };
 // TODO: To open the Mysterious Door, a sequence is required, which might be incomplete. Use object destructuring to assign default values to ensure the door opens even if part of the code is missing. Make sure the `middle` defaults to one of the values from the `remaining` variable above if not provided. Print the door code sequence.
+// Check solution code after to see what exactly to do here...
+const { middle = remaining.third } = doorCode;
+console.log(doorCode);
+console.log(middle);
 
 /* Task 4: The Guardian's Riddle */
 const riddle = {
@@ -29,10 +33,14 @@ const riddle = {
   modernWord: "Cat",
 };
 // TODO: The guardian of an ancient library speaks in riddles. Use object destructuring to rename `ancientWord` to `translation` in the `riddle` object. Print the translation of the riddle.
+const { ancientWord: translation } = riddle;
+console.log(`The translation is ${translation}.`);
 
 /* Task 5: The Array of Elements */
 const elements = ["Fire", "Water", "Earth", "Air"];
 // TODO: Inside the library, Destructo discovers an array that represents the elements needed to decipher the next clue. Use array destructuring to extract the first two elements. Print the essential elements.
+const [el1, el2] = elements;
+console.log(`The essential elements are ${el1} and ${el2}.`);
 
 /* Task 6: Skipping Stones */
 const stones = [1, 2, 3, 4, 5, 6];
