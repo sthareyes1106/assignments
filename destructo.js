@@ -51,6 +51,9 @@ console.log(`Stones: ${stone1}, ${stone6}`);
 /* Task 7: The Array of Shadows */
 const shadows = ["Darkness", "Silence", "Whisper", "Echo"];
 // TODO: The Cave of Shadows hides more than it reveals. Use array destructuring with the rest parameter to separate the visible shadow (which is the first) from the hidden ones. Print the visible shadow and the hidden shadows.
+const [visible, ...hidden] = shadows;
+console.log(`The visible shadow: ${visible}`);
+console.log(`The hidden shadows: ${hidden}`);
 
 /* Task 8: The Wise Function */
 // TODO: Destructo needs to decode ancient directions to continue his quest. Help him by writing a function `revealPath` that decodes and prints the direction and distance to travel. The function takes an object with `direction` and `distance` as parameters.
