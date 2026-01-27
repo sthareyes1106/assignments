@@ -6,7 +6,7 @@ const name = "Hank";
 const age = 45;
 const studyField = "Biology";
 
-// Participant object
+// Starting participant object
 const participant = {
   name,
   age,
@@ -48,3 +48,14 @@ secondParticipant.displayInfo();
 
 /* Task 4: Using Computed Property Names */
 // TODO: Implement a function named `updateParticipantInfo` that takes a property name and value as arguments alongside an object and returns a new object with that property dynamically set.
+
+function updateParticipantInfo(propName, val, obj) {
+  const updatedObj = {
+    ...obj,
+    [propName]: val,
+  };
+
+  return updatedObj;
+}
+
+console.log(updateParticipantInfo("name", "Hank Green", participant));
