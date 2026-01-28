@@ -10,3 +10,9 @@ const firstWater = mythicalCreatures.find(function (creature) {
   return creature.type === "Water";
 });
 console.log(firstWater);
+console.log(`The first creature with a water type is the ${firstWater.name}.`);
+
+const griffinIdx = mythicalCreatures.findIndex(function (creature) {
+  return creature.name === "Griffin";
+});
+console.log(`The Griffin is at index ${griffinIdx}.`);
