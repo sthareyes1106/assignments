@@ -19,10 +19,12 @@ const griffinIdx = mythicalCreatures.findIndex(function (creature) {
 });
 console.log(`The Griffin is at index ${griffinIdx}.`);
 
-// Assuming that the most recently seen creature is at the top...
-const lastSeenCreature = mythicalCreatures.find(function () {
-  return mythicalCreatures[0];
+// Using `find` to find the first creature seen in the enchanted forest
+const enchantedForestSighting = mythicalCreatures.find(function (creature) {
+  return creature.lastSeen === "Enchanted Forest";
 });
 
-console.log(lastSeenCreature);
-console.log(`The last seen creature is the ${lastSeenCreature.name}!`);
+// console.log(enchantedForestSighting);
+console.log(
+  `The first creature last seen in the Enchanted Forest is the ${enchantedForestSighting.name}!`,
+);
