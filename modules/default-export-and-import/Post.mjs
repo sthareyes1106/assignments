@@ -1,8 +1,8 @@
 // Default Post class
 export class Post {
   constructor(title, content) {
-    title;
-    content;
+    this.title = title;
+    this.content = content;
   }
 
   publish() {
