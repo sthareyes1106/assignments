@@ -8,8 +8,8 @@ export function addItem(item) {
 // removeItem: remove an item by name from the inventory array
 
 export function removeItem(item) {
-  index = inventory.indexOf(item);
-  inventory.splice(index, index + 1);
+  const index = inventory.indexOf(item);
+  inventory.splice(index, 1);
 }
 
 // listItems: logs all item names currently in the inventory
