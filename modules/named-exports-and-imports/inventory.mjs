@@ -1,3 +1,5 @@
+// Wow these function are significantly simpler than the solution code's!
+
 export const inventory = [];
 
 // addItem: adds an item by name to the inventory array
