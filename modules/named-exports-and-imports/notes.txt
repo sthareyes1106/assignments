@@ -1,0 +1,5 @@
+Next up!
+
+1. Go to storeManager.mjs []
+2. Import functions from inventory.mjs []
+3. Demostrate adding items, removing items, listing the items in the inventory
