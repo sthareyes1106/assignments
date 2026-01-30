@@ -2,13 +2,13 @@
 
 let theme = null;
 
-// setLightTheme
+// light theme function
 const setLightTheme = () => {
   console.log("Theme: Light");
   theme = "light";
 };
 
-// setDarkTheme
+// dark theme function
 const setDarkTheme = () => {
   console.log("Theme: Dark");
   theme = "dark";
