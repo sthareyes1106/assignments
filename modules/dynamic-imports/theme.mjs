@@ -3,13 +3,13 @@
 let theme = null;
 
 // light theme function
-const setLightTheme = () => {
+export const setLightTheme = () => {
   console.log("Theme: Light");
   theme = "light";
 };
 
 // dark theme function
-const setDarkTheme = () => {
+export const setDarkTheme = () => {
   console.log("Theme: Dark");
   theme = "dark";
 };
